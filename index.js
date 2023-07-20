@@ -17,7 +17,7 @@ const booky = express();
 booky.use(bodyParser.urlencoded({extended: true}));
 booky.use(bodyParser.json());
 
-mongoose.connect("mongodb+srv://harshal:xenopheno@cluster1.2ryugzm.mongodb.net/booky?retryWrites=true&w=majority",
+mongoose.connect(process.env.MONGO_URL,
 {
   useNewUrlParser: true,
   useUnifiedTopology: true,
